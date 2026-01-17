@@ -1,0 +1,70 @@
+<!-- write html form accpeting an integer having 4 digits input should not accpet charcter or latters and special symbol -->
+<html>
+
+<head>
+    <script>
+        function fun() {
+            pat = /^\d{4}$/
+            var obj = document.getElementById("t1").value
+            if (pat.test(obj)) {
+                alert("Match")
+            } else {
+                alert("not match")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="t1" id="t1">
+    <input type="submit" value="submit" onclick="fun()">
+</body>
+
+</html>
+
+
+
+<html>
+
+<head>
+    <script>
+        function fun() {
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check blank fields
+            if (username === "" || password === "") {
+                alert("Username and Password cannot be blank!");
+                return false;
+            }
+
+            // Username should not start with _, @, or number
+            var userPattern = /^[^_@\d][A-Za-z0-9_@]*$/;
+
+            if (!userPattern.test(username)) {
+                alert("Username should not start with _, @, or a number.");
+                return false;
+            }
+
+            // Password length between 6 and 12
+            if (password.length < 6 || password.length > 12) {
+                alert("Password must be between 6 and 12 characters.");
+                return false;
+            }
+
+            alert("Validation successful!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return fun()">
+        Username: <input type="text" id="username"><br><br>
+        Password: <input type="password" id="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

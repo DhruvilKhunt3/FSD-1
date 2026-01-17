@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function f1(e) {
+            alert("Key Code: " + e.keyCode);
+            let key = e.key.toLowerCase();
+            if (key == 'a' || key == 'e' || key == 'i' || key == 'o' || key == 'u') {
+                alert("Vowel is pressed");
+            }
+        }
+
+        function f2() {
+            document.body.style.backgroundColor = "red";
+        }
+
+    </script>
+</head>
+
+<body onkeypress="f1(event)" onkeyup="f2()">
+    <h2>Press any key</h2>
+</body>
+
+</html>

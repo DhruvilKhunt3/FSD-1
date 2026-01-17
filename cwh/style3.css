@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+}
+button{
+    background-color: aquamarine;
+    color: rgb(7, 4, 1);
+    height: 30px;
+    width: 100px;
+    border-style: outset;
+    border-radius: 100px;
+}
+div{
+    color: rgb(18, 183, 198);
+}

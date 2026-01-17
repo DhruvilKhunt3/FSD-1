@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script>
+        function cs() {
+            let u1
+            while (u1 == null || u1 == " " || u1 == undefined) {
+                u1 = prompt("enter name ")
+            }
+            let p1
+            while (p1 == undefined || p1 == null || p1.length < 8) {
+                p1 = prompt("Enter password")
+            }
+            let c1 = confirm("Are you sure ??")
+            if (c1 == true) {
+                document.write("register failled")
+            }
+            alert(`${u1} ${p1}`)
+        }
+
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="cs()">click</button>
+</body>
+
+</html>

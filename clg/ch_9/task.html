@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script>
+        function overHeading(h) {
+            h.style.color = "yellow";
+        }
+        function outHeading(h) {
+
+            h.style.color = "black";
+        }
+        function makeRed() {
+            document.body.style.backgroundColor = "red";
+        }
+        function makeGreen() {
+            document.body.style.backgroundColor = "green";
+        }
+
+        function findTime() {
+            var d = new Date()
+            document.getElementById("time").innerHTML = d
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2 onmouseover="overHeading(this)" onmouseout="outHeading(this)">Move mouse over this heading</h2>
+
+    <button type="button" onclick="makeRed()">Red</button>
+    <button type="button" onclick="makeGreen()">Green</button>
+    <button type="button" onclick="findTime()">Find Time</button>
+
+    <p id="time"></p>
+
+</body>
+
+</html>

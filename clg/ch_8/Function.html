@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <script>
+        //Trigger a onclick event(using fcn)
+        function fun() {
+            alert("welcome use")
+        }
+
+        //fanction called explicitly from js
+        function f1(a, b) {
+            return a * b
+        }
+        let result = f1(5, 6)
+            //self - invoke function (automatically execute function)
+            (function () {
+                document.write("hello")
+            })
+            ()
+
+        // function with arrgument
+        function fun1(fname, iname) {
+            document.write("Helllo " + fname + " " + iname)
+        }
+
+        //one func call another func
+        function info(first, last) {
+            var full = first + " " + last
+            return full
+        }
+        function hey() {
+            var reasult = info('abc', 'xyz')
+            document.write(reasult)
+        }
+
+        //ES6 function
+        //double para
+        const add = (a, b) => a + b
+        console.log(add(5, 6))
+        //single para
+        const s1 = x => x * x
+        console.log(s1(9))
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="fun()">Click me</button>
+    <button type="button" onclick="fun('abc','xyx')">Click me</button>
+    <button type="button" onclick="hey()">Click me</button>
+</body>
+
+</html>

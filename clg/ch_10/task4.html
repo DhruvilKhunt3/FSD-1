@@ -1,0 +1,35 @@
+<!-- write a js to validate username and password password length must be 6 to 12 char for username feild should not start with _,@,and 
+ any num also check both must not be blank
+  -->
+<html>
+
+<head>
+    <script>
+        function fun() {
+            var pat = /^[^_@\d][\w_@]*$/
+            var username = document.getElementById("t1").value
+            var password = document.getElementById("t2").value
+            if (username.length == 0 || password.length == 0) {
+                alert("Username and Password cannot be blank!");
+            }
+            else if (password.length < 6 || password.length > 12) {
+                alert("minmum length is 6 to 12")
+            }
+            else if (!pat.test(username)) {
+                alert("Username should not start with _, @, or a number.")
+            } else {
+                alert("welcome user")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return fun()">
+        Username: <input type="text" id="t1"><br><br>
+        Password: <input type="password" id="t2"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

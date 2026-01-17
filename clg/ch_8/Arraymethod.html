@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        //push
+        let f1 = ["orange", "apple", "mango"]
+        f1.push("banana")
+        console.log(f1)
+
+        //pop
+        let n1 = [10, 20, 30]
+        let r1 = n1.pop()
+        console.log(n1)
+        console.log(r1)
+
+        //map
+        let m1 = [1, 2, 3, 4]
+        let s1 = n1.map(n => n * n)
+        console.log(s1) //1,4,9,16
+        console.log(m1)
+
+        //filter
+        let a1 = [12, 18, 25, 14]
+        let b1 = a1.filter(a => a >= 18)
+        console.log(b1)
+
+        //for each
+        let x1 = ["a", "b", "c"]
+        n1.forEach(n => { console.log("hello " + n1) })
+
+        //includes
+        let c1 = ["red", "green"]
+        console.log(c1.includes("green"))
+        console.log(c1.includes("pink"))
+
+        //find
+        let c2 = [
+            { id: 1, name: 'a' },
+            { id: 2, name: 'B' }
+        ]
+        let u1 = c2.find(u => u.id == 2)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

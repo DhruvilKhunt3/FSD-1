@@ -1,0 +1,25 @@
+<!-- create html page where you store 2 feilds in session storage 
+ username = "LJ"  
+ email= "lj@example.com
+ retrive and display the stored user on the console remove only the email feild from the session stronge
+ then print the remaining data in the console"-->
+
+<html>
+
+<head>
+    <script>
+        //session
+        sessionStorage.setItem("username", "LJ")
+        sessionStorage.setItem("email", "lj@example.com")
+        let c1 = sessionStorage.getItem("username") // retrive
+        let c2 = sessionStorage.getItem("email") // retrive
+        sessionStorage.removeItem("email")
+        let c3 = sessionStorage.getItem("username") // retrive
+        console.log(c1, c2, c3)
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

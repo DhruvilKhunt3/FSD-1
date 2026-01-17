@@ -1,0 +1,81 @@
+<!-- create a from with 3 feild 
+ username
+ password
+ email
+ when the user clickes save button stored the entered value in to session storage after saving display a messege in alert box
+ data save succsessfuly
+ add another button remove email that removes only the email feild from the session storage after remove all displat the remaining data in the console -->
+<!-- create a from with 3 feild 
+ username
+ password
+ email
+ when the user clickes save button stored the entered value in to session storage after saving display a messege in alert box
+ data save succsessfuly
+ add another button remove email that removes only the email feild from the session storage after remove all displat the remaining data in the console -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Session Storage Example</title>
+    <script>
+        function saveUser(event) {
+            event.preventDefault(); // stop page reload
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let email = document.getElementById("email").value;
+
+            sessionStorage.setItem("username", username);
+            sessionStorage.setItem("password", password);
+            sessionStorage.setItem("email", email);
+
+            alert("Data saved successfully");
+        }
+
+        function removeEmail() {
+            sessionStorage.removeItem("email");
+
+            let username = sessionStorage.getItem("username");
+            let password = sessionStorage.getItem("password");
+
+            console.log("Username:", username);
+            console.log("Password:", password);
+        }
+
+        function showUser() {
+            let username = sessionStorage.getItem("username");
+            let password = sessionStorage.getItem("password");
+            let email = sessionStorage.getItem("email");
+
+            document.getElementById("output").innerHTML =
+                "Username: " + username + "<br>" +
+                "Password: " + password + "<br>" +
+                "Email: " + email;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>User Form</h2>
+
+    <form onsubmit="saveUser(event)">
+        <label>Username:</label>
+        <input type="text" id="username" required><br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" id="email" required><br><br>
+
+        <button type="submit">Save</button>
+        <button type="button" onclick="showUser()">Show</button>
+    </form>
+
+    <br>
+    <button onclick="removeEmail()">Remove Email</button>
+
+    <p id="output"></p>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+h1{
+    color: rgb(53, 62, 99);
+    text-decoration: overline;
+    background-color: aqua;
+}  
+
+body{
+    background-color: black;
+}
+
+h4{
+    color: antiquewhite;
+}
+
+p{
+    color: antiquewhite;
+}
+
+button{
+    background-color: aqua;
+    color: black;
+}
+
+div{
+    color: antiquewhite;
+}
+
+ul{
+    color:antiquewhite;
+}
+
+h3{
+    color:antiquewhite;
+}

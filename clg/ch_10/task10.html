@@ -1,0 +1,57 @@
+<!-- create a form with 3 feilds 
+ name
+ lastname
+ rollno
+ and save button
+ 1st requrment when the user click save stored rhe enterd value in local storage 
+ 2nd after saving display a messge data save in local storage
+ 3rd add another button remove roll no that removes only the roll no feild from local storage 
+ 4th after remove all display the remainng data in the console -->
+
+
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        function saveuser() {
+            let u1 = document.getElementById("t1").value
+            let u2 = document.getElementById("t2").value
+            let u3 = document.getElementById("t3").value
+            localStorage.setItem("name", u1)
+            localStorage.setItem("lastname", u2)
+            localStorage.setItem("rollno", u3)
+            document.write("data saved in local storage")
+        }
+        function clearuser() {
+            localStorage.removeItem(u3)
+        }
+        function showuser() {
+            let u4 = localStorage.getItem("name")
+            let u5 = sessionStorage.getItem("lastname")
+            let u6 = sessionStorage.getItem("rollno")
+            document.getElementById("output").innerHTML = "name = " + u4 + " lastname = " + u5 + "rollno = " + u6
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="saveuser()">
+        <label for="username">name</label>
+        <input type="text" id="t1">
+        <label for="username">lastname</label>
+        <input type="text" id="t2">
+        <label for="username">rollno</label>
+        <input type="text" id="t3">
+        <button type="submit">save</button>
+        <button onclick="showuser()">show</button>
+    </form>
+    <button onclick="clearuser()">remove</button>
+    <p id="output"></p>
+</body>
+
+</html>

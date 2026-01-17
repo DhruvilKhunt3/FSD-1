@@ -1,0 +1,26 @@
+<!-- string must contain only latters and atlist 1 letter or more are allowed -->
+<html>
+
+<head>
+    <script>
+        function fun() {
+            var pat = /^[A-Z a-z]+$/
+            var string = document.getElementById("t1").value
+            if (pat.test(string)) {
+                alert("welcome")
+            } else {
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return fun()">
+        Username: <input type="text" id="t1"><br><br>
+        Password: <input type="password" id="t2"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

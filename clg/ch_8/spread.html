@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script>
+        arr1 = [10, 42, 35]
+        arr2 = [14, 56]
+        //normal
+        let arr3 = [arr1, arr2]
+        console.log(arr3)
+        //spread
+        arr = [...arr1, ...arr2]
+        console.log(...arr) //10 42 35 14 56
+        console.log(arr) //[10 42 35 14 56]
+        console.log(Math.min(arr)) // -> NaN
+        console.log(Math.min(...arr)) // -> 10
+        console.log(`sorted: ${arr.sort()}`)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

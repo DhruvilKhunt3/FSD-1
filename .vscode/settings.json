@@ -1,0 +1,7 @@
+{
+    "git.decorations.enabled": false,
+    "git.confirmEmptyCommits": true,
+    "git.confirmSync": true,
+    "git.detectSubmodules": true,
+    "git.enabled": false
+}

@@ -1,0 +1,22 @@
+<!-- to find form length take 4 feild username,password,submit button.reset button -->
+<html>
+
+<head>
+    <script>
+        function len() {
+            var obj3 = document.forms["f1"]
+            alert(obj3.length)
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="return len()" name="f1">
+        <input type="text" name="t1" id="t1">
+        <input type="text" name="t1" id="t2">
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+</body>
+
+</html>

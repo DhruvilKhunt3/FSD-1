@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script>
+        function saveuser() {
+            let u1 = document.getElementById("t1").value
+            localStorage.setItem("t1", u1)
+            sessionStorage.setItem("t1", u1)
+
+        }
+        function showuser() {
+            let u2 = localStorage.getItem("t1")
+            let u3 = sessionStorage.getItem("t1")
+            document.getElementById("output").innerHTML = "local = " + u2 + " session = " + u3
+        }
+        function clearuser() {
+            localStorage.clear()
+            sessionStorage.clear()
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="t1">
+    <button onclick="saveuser()">save</button>
+    <button onclick="showuser()">show</button>
+    <button onclick="clearuser()">clear</button>
+    <p id="output"></p>
+</body>
+
+</html>

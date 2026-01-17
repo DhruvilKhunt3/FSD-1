@@ -1,0 +1,32 @@
+<!-- create a small html page where you store 3 feilds in localstorage 
+ product=laptop
+ price == 50000
+ discount=10
+ retrive and display the store product in the console remove discounbt feild from the local storage than print
+ rhe upadted data in the console-->
+<html>
+
+<head>
+    <script>
+        //local 
+        localStorage.setItem("product", "laptop") // set item
+        localStorage.setItem("price", "50000") // set item
+        localStorage.setItem("discount", "10") // set item
+        let u1 = localStorage.getItem("product") // retrive item
+        let u2 = localStorage.getItem("price") // retrive item
+        let u3 = localStorage.getItem("discount") // retrive item
+        console.log(u1)
+        console.log(u2)
+        console.log(u3)
+        localStorage.removeItem("discount") // remove for one item
+        let u4 = localStorage.getItem("product") // retrive item
+        let u5 = localStorage.getItem("price") // retrive item
+        console.log(u4)
+        console.log(u5)
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
